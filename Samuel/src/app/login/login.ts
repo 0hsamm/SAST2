@@ -7,17 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './login.css',
 })
 export class Login {
+  usuario = 'Samuel';
+  contrasena = '1234';
+  usuarioIngresar = '';
+  contrasenaIngresar = '';
+  textoFinal = '';
 
-  usuario ="Samuel";
-  contrasena = "1234";
-  usuarioIngresar = "";
-  contrasenaIngresar = "";
-  validar(): void {
-    if(this.usuarioIngresar === this.usuario && this.contrasenaIngresar === this.contrasena){
-      console.log("Bienvenido");
-    }else{
-      console.log("Usuario o contraseña incorrecto")
+  validar(usuarioIngresar: string, contrasenaIngresar: string): void {
+    this.usuarioIngresar = usuarioIngresar;
+    this.contrasenaIngresar = contrasenaIngresar;
+    if (this.usuarioIngresar === this.usuario && this.contrasenaIngresar === this.contrasena) {
+      this.textoFinal = 'Bienvenido';
+    } else {
+      this.textoFinal = 'Inicio de sesion fallido ';
     }
   }
-
 }
