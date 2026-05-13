@@ -12,4 +12,6 @@ import {FormsModule} from "@angular/forms";
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
-export class AppModule {}
+export class AppModule {
+
+}

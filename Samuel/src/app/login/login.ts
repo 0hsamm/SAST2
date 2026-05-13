@@ -8,15 +8,15 @@ import { Component } from '@angular/core';
 })
 export class Login {
 
-  usuario: string = "Samuel";
-  contrasena: string = "1234";
-  usuarioIngresar: string = "";
-  contrasenaIngresar: string = "";
-  validar(usuario:string, contrasena:string): void {
-    if(this.usuarioIngresar == this.usuario && this.contrasenaIngresar == this.contrasena){
-      alert("Bienvenido");
+  usuario ="Samuel";
+  contrasena = "1234";
+  usuarioIngresar = "";
+  contrasenaIngresar = "";
+  validar(): void {
+    if(this.usuarioIngresar === this.usuario && this.contrasenaIngresar === this.contrasena){
+      console.log("Bienvenido");
     }else{
-      alert("Usuario o contraseña incorrecto")
+      console.log("Usuario o contraseña incorrecto")
     }
   }
 
